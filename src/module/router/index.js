@@ -1,7 +1,6 @@
 'use strict'
 
 import Glob from 'glob';
-import { isArray } from 'util';
 import Package from './../../../package.json';
 
 export default {
@@ -13,7 +12,7 @@ export default {
           ignore: options.ignore
         }
     
-        const optionRoute = isArray(options.routes) ? options.routes : [options.routes];
+        const optionRoute = Array.isArray(options.routes) ? options.routes : [options.routes];
         optionRoute.forEach(pattern => {
           const files = Glob.sync(pattern, globOptions);
     
