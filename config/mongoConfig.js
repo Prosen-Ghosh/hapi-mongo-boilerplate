@@ -1,7 +1,7 @@
 export default {
     protocol: 'mongodb',
     hostname: process.env.MONGO_DB_HOSTNAME || 'localhost',
-    port: process.env.MONGO_DB_PORT || '27017',
+    port: process.env.MONGO_DB_PORT || 13372,
     database: process.env.MONGO_DB_DATABASE || 'testdb',
     user: process.env.MONGO_DB_USER || 'test',
     password: process.env.MONGO_DB_PASSWORD || '123456',
@@ -12,6 +12,7 @@ export default {
     useFindAndModify: false,
     reconnectTries: Number.MAX_VALUE, // Never stop trying to reconnect
     reconnectInterval: 1000,
+    useUnifiedTopology: true,
 
     uri: function () {
         return this.protocol + '://' + this.hostname + ':' + this.port + '/' + this.database;
@@ -30,7 +31,8 @@ export default {
             useFindAndModify: this.useFindAndModify,
             auth: this.auth(),
             reconnectTries: this.reconnectTries,
-            reconnectInterval: this.reconnectInterval
+            reconnectInterval: this.reconnectInterval,
+            useUnifiedTopology: this.useUnifiedTopology
         }
     }
 }
