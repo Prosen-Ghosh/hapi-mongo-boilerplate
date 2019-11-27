@@ -1,6 +1,7 @@
 'use strict';
 import Hapi from '@hapi/hapi';
 import { ServerConfig } from './../../config';
+import HapiRouter from './../module/router';
 
 export default async () => {
 
@@ -9,11 +10,10 @@ export default async () => {
         host: ServerConfig.host
     });
 
-    server.route({
-        method: 'GET',
-        path: '/',
-        handler: (request, h) => {
-            return 'Hello World!';
+    await server.register({
+        plugin: HapiRouter,
+        options: {
+            routes: './src/**/route.js'
         }
     });
 
