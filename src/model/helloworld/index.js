@@ -8,7 +8,8 @@ const HelloWorldSchema = new Schema({
         required: true
     },
 }, {
-    timestamps: true
+    timestamps: true,
+    versionKey: false
 });
 
 export default Mongoose.model('helloworld', HelloWorldSchema);
