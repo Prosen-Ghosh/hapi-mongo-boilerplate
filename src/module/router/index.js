@@ -20,8 +20,8 @@ export default {
           files.forEach(file => {
             const route = require(globOptions.cwd + '/' + file);
             server.route(route.default || route);
-          })
-        })
+          });
+        });
     },
     pkg: Package
 }
