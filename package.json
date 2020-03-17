@@ -10,16 +10,16 @@
   "author": "Prosen Ghosh",
   "license": "ISC",
   "dependencies": {
-    "@hapi/hapi": "^18.4.0",
+    "@hapi/hapi": "^19.1.1",
     "dotenv": "^8.2.0",
-    "mongoose": "^5.7.12"
+    "mongoose": "^5.9.5"
   },
   "devDependencies": {
-    "@babel/cli": "^7.7.4",
-    "@babel/core": "^7.7.4",
-    "@babel/node": "^7.7.4",
-    "@babel/preset-env": "^7.7.4",
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.7",
+    "@babel/node": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
     "glob": "^7.1.6",
-    "nodemon": "^2.0.1"
+    "nodemon": "^2.0.2"
   }
 }
